@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Muddy Knees Kids Rugby | Kids rugby sessions on Tooting Common</title>
+  <meta name="description" content="Fun, muddy, friendly rugby sessions for children on Tooting Common, South London. No experience needed.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --red: #c8102e;
+      --deep-red: #8f0a20;
+      --yellow: #ffd100;
+      --cream: #fff8e1;
+      --ink: #2a0c10;
+
+      /* Camo patterns: red, yellow and dark red versions */
+      --camo-red: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Cpath fill='%238f0a20' d='M20 60C40 20 110 30 120 70C130 110 70 130 40 110C20 100 10 80 20 60Z'/%3E%3Cpath fill='%236b0716' d='M170 30C210 10 280 40 270 90C260 130 200 120 180 90C165 70 160 45 170 30Z'/%3E%3Cpath fill='%23ffd100' d='M200 170C230 150 285 170 280 215C275 255 215 265 195 235C180 215 185 185 200 170Z'/%3E%3Cpath fill='%238f0a20' d='M30 190C70 170 130 190 120 235C110 275 50 280 30 250C15 230 15 205 30 190Z'/%3E%3Cpath fill='%236b0716' d='M130 140C150 130 175 140 170 160C165 178 140 180 130 165Z'/%3E%3Cpath fill='%23ffd100' d='M135 250C150 240 170 248 165 265C160 280 140 282 133 270Z'/%3E%3Cpath fill='%23ffd100' d='M95 8C108 2 122 8 118 18C114 26 98 27 93 18Z'/%3E%3C/svg%3E");
+      --camo-yellow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Cpath fill='%23f5b800' d='M20 60C40 20 110 30 120 70C130 110 70 130 40 110C20 100 10 80 20 60Z'/%3E%3Cpath fill='%23ffe566' d='M170 30C210 10 280 40 270 90C260 130 200 120 180 90C165 70 160 45 170 30Z'/%3E%3Cpath fill='%23f5b800' d='M200 170C230 150 285 170 280 215C275 255 215 265 195 235C180 215 185 185 200 170Z'/%3E%3Cpath fill='%23ffe566' d='M30 190C70 170 130 190 120 235C110 275 50 280 30 250C15 230 15 205 30 190Z'/%3E%3Cpath fill='%23f0a800' d='M130 140C150 130 175 140 170 160C165 178 140 180 130 165Z'/%3E%3C/svg%3E");
+      --camo-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Cpath fill='%236b0716' d='M20 60C40 20 110 30 120 70C130 110 70 130 40 110C20 100 10 80 20 60Z'/%3E%3Cpath fill='%23c8102e' d='M170 30C210 10 280 40 270 90C260 130 200 120 180 90C165 70 160 45 170 30Z'/%3E%3Cpath fill='%234a050f' d='M200 170C230 150 285 170 280 215C275 255 215 265 195 235C180 215 185 185 200 170Z'/%3E%3Cpath fill='%23c8102e' d='M30 190C70 170 130 190 120 235C110 275 50 280 30 250C15 230 15 205 30 190Z'/%3E%3Cpath fill='%234a050f' d='M130 140C150 130 175 140 170 160C165 178 140 180 130 165Z'/%3E%3C/svg%3E");
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Nunito", "Trebuchet MS", Arial, sans-serif;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: var(--ink);
+      background: var(--cream);
+    }
+    h1, h2, h3 {
+      font-family: "Bowlby One", Impact, "Arial Black", sans-serif;
+      font-weight: 400;
+      line-height: 1.1;
+      margin: 0 0 0.6rem;
+    }
+    a { color: var(--red); }
+    a:focus-visible, .btn:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+    .wrap { max-width: 62rem; margin: 0 auto; padding: 0 1.25rem; }
+
+    /* Top bar */
+    .topbar { background-color: var(--deep-red); background-image: var(--camo-dark); background-size: 320px; color: #fff; }
+    .topbar .wrap {
+      display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem;
+      align-items: center; justify-content: space-between; padding-top: 0.75rem; padding-bottom: 0.75rem;
+    }
+    .brand { font-family: "Bowlby One", Impact, sans-serif; font-size: 1.3rem; color: var(--yellow); text-decoration: none; text-shadow: 2px 2px 0 var(--ink); }
+    .topbar nav a { color: #fff; text-decoration: none; font-weight: 800; margin-left: 1.25rem; text-shadow: 1px 1px 0 var(--ink); }
+    .topbar nav a:hover { color: var(--yellow); }
+
+    /* Hero */
+    .hero { background-color: var(--red); background-image: var(--camo-red); background-size: 380px; color: #fff; padding: 3.5rem 0 4.75rem; position: relative; overflow: hidden; }
+    .hero .wrap { display: grid; gap: 2rem; grid-template-columns: 1fr; align-items: center; }
+    .hero h1 { font-size: clamp(2.4rem, 8vw, 4.5rem); color: var(--yellow); text-shadow: 3px 3px 0 var(--ink); }
+    .hero p { font-size: 1.3rem; max-width: 30rem; font-weight: 700; text-shadow: 0 1px 4px rgba(42, 12, 16, 0.8); }
+    .ball { width: min(100%, 16rem); justify-self: center; transform: rotate(-18deg); }
+    @media (min-width: 46rem) { .hero .wrap { grid-template-columns: 1.4fr 1fr; } }
+    .hero::after {
+      content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1.25rem;
+      background-color: var(--yellow); background-image: var(--camo-yellow); background-size: 300px;
+      border-top: 3px solid var(--ink);
+    }
+
+    .btn {
+      display: inline-block; background: var(--yellow); color: var(--ink);
+      font-weight: 800; text-decoration: none; padding: 0.8rem 1.6rem;
+      border-radius: 999px; border: 3px solid var(--ink); margin-top: 0.5rem; text-shadow: none;
+    }
+    .btn:hover { background: #fff; }
+
+    section { padding: 3.5rem 0; }
+    h2 { font-size: clamp(1.8rem, 5vw, 2.6rem); color: var(--red); }
+
+    /* Details band */
+    .band { background-color: var(--yellow); background-image: var(--camo-yellow); background-size: 360px; }
+    .band h2 { color: var(--deep-red); }
+    .details { display: grid; gap: 1.5rem 3rem; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); }
+    .details dt { font-weight: 800; }
+    .details dd { margin: 0 0 1rem; }
+    ul.tick { list-style: none; padding: 0; margin: 0; }
+    ul.tick li { padding-left: 1.8rem; position: relative; margin-bottom: 0.4rem; }
+    ul.tick li::before { content: "\2713"; position: absolute; left: 0; font-weight: 800; color: var(--red); }
+
+    /* Contact */
+    .contact { background-color: var(--deep-red); background-image: var(--camo-dark); background-size: 380px; color: #fff; text-align: center; }
+    .contact h2 { color: var(--yellow); text-shadow: 3px 3px 0 var(--ink); }
+    .contact p { font-weight: 700; text-shadow: 0 1px 4px rgba(42, 12, 16, 0.8); }
+
+    footer { background: var(--ink); color: #ddd; font-size: 0.9rem; padding: 1.25rem 0; text-align: center; }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="wrap">
+      <a class="brand" href="#top">Muddy Knees Kids Rugby</a>
+      <nav aria-label="Main">
+        <a href="#details">Details</a>
+        <a href="#join">Join</a>
+      </nav>
+    </div>
+  </div>
+
+  <header class="hero" id="top">
+    <div class="wrap">
+      <div>
+        <h1>Rugby for kids. Out on Tooting Common.</h1>
+        <p>Friendly, fun, muddy sessions that teach teamwork, confidence and the basics of rugby. No experience needed, just bring your child and a smile.</p>
+        <a class="btn" href="https://u-mkkr.app.n8n.cloud/form/3ce864e7-6b09-4ea6-a516-dd94835809ce" target="_blank" rel="noopener">Book a free taster</a>
+      </div>
+      <svg class="ball" viewBox="0 0 200 120" role="img" aria-label="Rugby ball">
+        <ellipse cx="100" cy="60" rx="95" ry="55" fill="#ffd100" stroke="#2a0c10" stroke-width="5"/>
+        <path d="M55 38 Q100 20 145 38" fill="none" stroke="#2a0c10" stroke-width="4"/>
+        <path d="M55 82 Q100 100 145 82" fill="none" stroke="#2a0c10" stroke-width="4"/>
+        <g stroke="#2a0c10" stroke-width="5" stroke-linecap="round">
+          <line x1="100" y1="42" x2="100" y2="78"/>
+          <line x1="84" y1="50" x2="84" y2="70"/>
+          <line x1="116" y1="50" x2="116" y2="70"/>
+        </g>
+      </svg>
+    </div>
+  </header>
+
+  <main>
+    <section class="band" id="details">
+      <div class="wrap">
+        <h2>Session details</h2>
+        <div class="details">
+          <dl>
+            <dt>Where</dt>
+            <dd>Tooting Common, London SW17. Exact meeting point sent when you book.</dd>
+            <dt>When</dt>
+            <dd>Saturday mornings, term time. Add your exact times here.</dd>
+            <dt>Cost</dt>
+            <dd>Add your prices here. First session is a free taster.</dd>
+          </dl>
+          <div>
+            <strong>What to bring</strong>
+            <ul class="tick">
+              <li>Football boots or trainers</li>
+              <li>Shin pads (optional)</li>
+              <li>A water bottle</li>
+              <li>Warm layers and a waterproof</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="safe">
+      <div class="wrap">
+        <h2>Safe, fun and welcoming</h2>
+        <p>Our coaches are qualified, DBS checked and first aid trained. Sessions focus on tag and touch rugby. Boys and girls are equally welcome.</p>
+        <p><em>Edit this paragraph to match your real qualifications and policies.</em></p>
+      </div>
+    </section>
+
+    <section class="contact" id="join">
+      <div class="wrap">
+        <h2>Come and get muddy</h2>
+        <p>Book a free taster session, or email us with any questions.</p>
+        <a class="btn" href="https://u-mkkr.app.n8n.cloud/form/3ce864e7-6b09-4ea6-a516-dd94835809ce" target="_blank" rel="noopener">Book a free taster</a>
+        <p>Questions? <a href="mailto:hello@yourwebsite.co.uk" style="color: var(--yellow);">hello@yourwebsite.co.uk</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">&copy; 2026 Muddy Knees Kids Rugby. Tooting Common, London SW17.</div>
+  </footer>
+
+</body>
+</html>
