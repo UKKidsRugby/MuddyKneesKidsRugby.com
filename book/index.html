@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Book a free trial | Muddy Knees Kids Rugby</title>
+<meta name="description" content="Book a free trial rugby session for your child aged 2 to 7 on Tooting Common, South London. No experience needed.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Rubik+Spray+Paint&family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
+<script>
+// Start loading the free trial dates straight away, while the rest of the page loads
+window.mkDatesUrl = 'https://u-mkkr.app.n8n.cloud/webhook/mkkr-trial-dates';
+try {
+  window.mkDates = fetch(window.mkDatesUrl).then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); });
+  window.mkDates.catch(function () {});
+} catch (e) {}
+</script>
+<style>
+:root{color-scheme:light;--ink:#3a0b07;--deep:#931a10;--red:#cf2a1d;--blush:#fff4bf;--cream:#fff7dc;--paper:#fffbea;--sun:#ffd51a;--muted:#6e3b33;--camo-ry:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 520 300'%3E%3Crect width='520' height='300' fill='%23cf2a1d'/%3E%3Cpath d='M21.4 -26.3C19.0 -17.6 2.0 0.6 -7.8 9.3C-17.7 18.0 -28.8 24.3 -37.7 26.0C-46.7 27.7 -51.5 26.1 -61.6 19.6C-71.6 13.0 -96.4 -2.9 -97.9 -13.2C-99.5 -23.5 -81.2 -32.2 -70.9 -42.4C-60.6 -52.5 -49.1 -74.3 -36.2 -74.3C-23.3 -74.3 -3.2 -50.4 6.4 -42.4C16.0 -34.4 23.8 -34.9 21.4 -26.3Z' fill='%239e1c12'/%3E%3Cpath d='M21.9 280.9C21.6 290.3 5.5 299.1 -5.8 308.5C-17.1 317.9 -34.4 337.3 -45.8 337.2C-57.2 337.1 -63.9 315.9 -74.4 307.9C-84.9 300.0 -108.7 296.1 -108.8 289.3C-109.0 282.5 -85.8 278.0 -75.3 267.2C-64.8 256.4 -57.7 227.2 -45.9 224.6C-34.1 222.1 -15.8 242.4 -4.5 251.7C6.8 261.1 22.1 271.4 21.9 280.9Z' fill='%239e1c12'/%3E%3Cpath d='M549.2 -21.4C544.9 -10.4 528.2 0.9 515.6 11.0C503.0 21.2 488.3 36.2 473.6 39.5C459.0 42.8 433.9 41.8 427.6 30.9C421.3 19.9 434.8 -14.8 435.9 -26.0C437.0 -37.2 424.9 -26.9 434.1 -36.4C443.3 -45.8 473.1 -79.5 491.0 -82.6C508.9 -85.6 531.6 -65.0 541.3 -54.8C551.0 -44.6 553.5 -32.4 549.2 -21.4Z' fill='%239e1c12'/%3E%3Cpath d='M546.5 298.0C543.3 313.0 517.9 315.0 509.0 319.9C500.1 324.8 508.2 328.2 493.0 327.6C477.8 326.9 429.5 321.6 417.8 315.9C406.0 310.2 420.1 305.3 422.6 293.5C425.1 281.6 423.3 256.7 432.6 244.8C441.8 232.8 462.1 224.5 478.1 222.0C494.0 219.6 516.8 217.4 528.2 230.0C539.6 242.7 549.7 283.0 546.5 298.0Z' fill='%239e1c12'/%3E%3Cpath d='M0.6 211.2C0.4 219.1 -12.6 220.7 -22.8 226.8C-33.1 233.0 -51.0 248.6 -60.9 248.3C-70.9 248.0 -75.8 231.2 -82.6 224.9C-89.4 218.5 -98.8 217.7 -101.9 210.3C-105.0 202.8 -109.1 186.9 -101.0 180.1C-92.9 173.3 -66.3 169.6 -53.0 169.5C-39.8 169.5 -30.7 172.9 -21.7 179.9C-12.8 186.8 0.8 203.4 0.6 211.2Z' fill='%239e1c12'/%3E%3Cpath d='M496.8 209.2C492.6 218.6 490.7 228.9 486.8 234.9C482.8 240.8 481.6 245.6 473.0 244.7C464.5 243.8 444.2 236.5 435.5 229.3C426.7 222.2 420.9 211.0 420.5 202.1C420.0 193.2 426.1 182.3 432.6 176.1C439.2 169.9 446.5 164.3 459.7 164.7C472.9 165.1 505.9 171.2 512.1 178.6C518.2 186.1 501.1 199.8 496.8 209.2Z' fill='%239e1c12'/%3E%3Cpath d='M448.9 198.2C451.4 209.4 461.8 227.5 454.7 236.1C447.7 244.6 421.3 250.3 406.7 249.6C392.1 248.8 373.9 239.1 367.2 231.7C360.5 224.3 368.5 215.8 366.5 205.3C364.5 194.7 350.5 174.9 355.2 168.3C359.8 161.7 380.3 165.8 394.4 165.8C408.5 165.8 430.7 163.1 439.8 168.5C448.9 173.9 446.4 186.9 448.9 198.2Z' fill='%239e1c12'/%3E%3Cpath d='M178.5 -37.1C178.0 -29.7 161.7 -25.7 155.9 -21.0C150.1 -16.2 152.3 -8.3 143.7 -8.5C135.1 -8.7 110.9 -16.8 104.3 -22.3C97.8 -27.8 103.0 -33.4 104.5 -41.5C106.0 -49.6 107.2 -66.4 113.4 -70.8C119.6 -75.1 134.1 -68.6 141.6 -67.7C149.2 -66.8 152.6 -70.3 158.7 -65.2C164.9 -60.1 179.0 -44.4 178.5 -37.1Z' fill='%239e1c12'/%3E%3Cpath d='M181.8 254.6C181.7 264.0 173.1 286.7 165.0 291.4C156.9 296.1 142.8 283.4 133.1 282.9C123.4 282.3 112.7 292.4 106.9 288.0C101.1 283.6 99.4 267.2 98.1 256.5C96.9 245.8 93.9 231.6 99.5 224.1C105.1 216.6 120.7 209.8 131.7 211.7C142.7 213.6 157.2 228.1 165.6 235.2C173.9 242.4 181.9 245.2 181.8 254.6Z' fill='%239e1c12'/%3E%3Cpath d='M35.3 -8.0C34.9 -0.9 29.1 7.3 20.8 12.7C12.5 18.2 -6.5 25.1 -14.7 24.8C-22.9 24.6 -21.5 16.1 -28.3 11.3C-35.2 6.6 -55.0 1.9 -55.8 -3.8C-56.7 -9.5 -41.6 -18.0 -33.4 -23.0C-25.2 -27.9 -15.9 -32.3 -6.5 -33.4C2.9 -34.5 16.0 -33.9 23.0 -29.7C29.9 -25.5 35.6 -15.0 35.3 -8.0Z' fill='%239e1c12'/%3E%3Cpath d='M31.7 295.4C33.7 304.4 30.1 328.1 22.7 332.4C15.3 336.7 -2.3 324.5 -12.6 321.1C-22.9 317.7 -34.9 315.5 -38.9 311.9C-42.8 308.4 -37.2 308.5 -36.1 299.7C-35.1 290.9 -37.6 263.9 -32.7 258.9C-27.8 254.0 -14.2 266.7 -6.9 269.8C0.4 273.0 4.6 273.5 11.0 277.8C17.5 282.1 29.7 286.3 31.7 295.4Z' fill='%239e1c12'/%3E%3Cpath d='M549.8 -5.1C551.3 -0.2 549.1 4.9 542.1 10.0C535.2 15.1 518.6 24.5 508.0 25.6C497.3 26.8 483.3 21.2 478.0 17.0C472.7 12.7 475.0 6.9 476.0 0.2C477.1 -6.5 478.4 -16.3 484.3 -23.3C490.2 -30.3 503.2 -42.5 511.4 -41.8C519.5 -41.1 526.8 -25.2 533.2 -19.1C539.6 -13.0 548.3 -9.9 549.8 -5.1Z' fill='%239e1c12'/%3E%3Cpath d='M558.4 296.0C557.6 305.8 548.1 322.1 541.7 330.1C535.2 338.1 529.2 345.5 519.7 344.2C510.2 343.0 493.5 329.4 484.6 322.7C475.6 315.9 465.2 313.6 465.8 303.7C466.5 293.9 481.7 272.1 488.4 263.7C495.0 255.2 496.1 251.7 505.8 252.9C515.4 254.1 537.5 263.7 546.3 270.9C555.0 278.0 559.2 286.1 558.4 296.0Z' fill='%239e1c12'/%3E%3Cpath d='M411.2 223.2C413.2 228.0 422.3 232.4 416.5 235.9C410.7 239.3 387.0 242.9 376.2 243.7C365.4 244.5 357.3 245.4 351.7 240.6C346.1 235.9 340.8 222.7 342.6 215.1C344.4 207.5 355.6 201.0 362.3 195.2C368.9 189.4 375.4 178.5 382.5 180.5C389.5 182.4 399.7 199.8 404.5 206.9C409.3 214.0 409.2 218.3 411.2 223.2Z' fill='%239e1c12'/%3E%3Cpath d='M415.7 173.9C411.6 182.4 398.4 196.3 384.8 206.3C371.3 216.3 348.4 230.6 334.3 233.9C320.3 237.2 308.2 234.4 300.5 225.8C292.9 217.3 287.3 196.8 288.5 182.4C289.7 168.1 297.2 150.2 307.8 139.6C318.4 128.9 335.2 116.0 352.1 118.6C369.1 121.2 398.9 146.0 409.5 155.3C420.0 164.5 419.8 165.4 415.7 173.9Z' fill='%239e1c12'/%3E%3Cpath d='M316.9 107.3C317.1 115.7 302.6 118.0 292.6 122.9C282.6 127.8 265.6 136.3 256.7 136.5C247.9 136.7 247.2 129.3 239.7 124.0C232.1 118.8 210.6 111.4 211.5 105.0C212.3 98.5 235.4 91.4 244.7 85.1C254.1 78.8 259.7 69.2 267.5 67.2C275.3 65.2 283.3 66.3 291.6 72.9C299.8 79.6 316.8 99.0 316.9 107.3Z' fill='%239e1c12'/%3E%3Cpath d='M408.6 137.6C408.2 144.7 416.6 157.3 412.1 162.5C407.6 167.6 390.1 166.6 381.4 168.5C372.7 170.4 366.1 177.1 359.9 173.8C353.8 170.5 343.0 157.4 344.4 148.6C345.7 139.8 360.7 128.5 368.1 120.8C375.5 113.1 381.1 102.6 388.8 102.4C396.6 102.2 411.2 113.7 414.5 119.6C417.8 125.5 409.0 130.4 408.6 137.6Z' fill='%23e0451f'/%3E%3Cpath d='M112.5 89.9C112.5 95.7 101.7 108.8 95.7 113.9C89.7 118.9 82.9 121.8 76.5 120.2C70.0 118.6 61.6 108.5 57.1 104.2C52.5 100.0 50.3 99.2 49.2 94.6C48.1 90.0 44.9 82.6 50.4 76.5C55.9 70.4 74.6 57.6 82.1 58.0C89.6 58.4 90.3 73.5 95.4 78.8C100.5 84.1 112.4 84.0 112.5 89.9Z' fill='%23e0451f'/%3E%3Cpath d='M362.4 66.9C364.3 74.3 356.6 80.5 350.0 88.7C343.4 96.9 334.3 114.2 322.7 116.1C311.1 117.9 288.2 106.7 280.4 99.9C272.6 93.1 273.2 84.4 275.9 75.3C278.6 66.2 289.5 51.8 296.7 45.3C303.9 38.8 312.0 36.4 319.0 36.3C326.0 36.2 331.2 39.5 338.4 44.6C345.6 49.7 360.5 59.6 362.4 66.9Z' fill='%23e0451f'/%3E%3Cpath d='M82.1 14.3C80.5 18.4 76.8 24.5 73.6 29.0C70.3 33.5 67.8 40.2 62.6 41.4C57.5 42.5 47.2 40.4 42.6 35.8C37.9 31.2 33.5 18.9 34.5 13.8C35.5 8.6 43.6 8.3 48.5 4.9C53.5 1.4 58.5 -6.9 64.3 -7.0C70.1 -7.0 80.1 0.9 83.1 4.4C86.1 8.0 83.7 10.2 82.1 14.3Z' fill='%23e0451f'/%3E%3Cpath d='M76.9 319.5C77.5 326.1 81.2 337.9 78.5 340.9C75.9 344.0 66.5 339.9 61.2 337.6C55.9 335.3 50.7 330.8 46.7 327.0C42.6 323.3 36.9 319.9 37.2 315.2C37.4 310.4 43.9 300.8 48.3 298.6C52.7 296.3 59.2 301.2 63.6 301.7C68.0 302.2 72.7 298.6 74.9 301.6C77.1 304.6 76.3 312.9 76.9 319.5Z' fill='%23e0451f'/%3E%3Cpath d='M427.4 33.9C427.0 39.6 429.8 51.4 426.5 54.1C423.2 56.8 412.8 51.7 407.5 50.2C402.2 48.8 397.5 47.5 394.9 45.4C392.3 43.3 390.8 41.7 391.9 37.8C393.0 33.9 398.9 25.6 401.4 21.9C403.8 18.2 402.2 15.9 406.8 15.6C411.5 15.3 425.8 16.8 429.2 19.9C432.6 23.0 427.9 28.3 427.4 33.9Z' fill='%23e0451f'/%3E%3Cpath d='M432.4 333.9C432.0 338.8 425.6 344.5 422.6 348.2C419.5 351.8 417.8 356.0 414.1 355.8C410.3 355.5 403.7 349.9 400.0 346.7C396.4 343.4 392.8 341.4 392.2 336.5C391.6 331.5 393.6 320.8 396.7 317.1C399.8 313.3 406.2 313.7 410.9 314.0C415.6 314.3 421.4 315.5 425.0 318.8C428.6 322.1 432.8 329.0 432.4 333.9Z' fill='%23e0451f'/%3E%3Cpath d='M294.2 181.0C293.2 186.1 286.0 198.2 279.4 204.7C272.9 211.1 263.4 218.6 254.9 219.7C246.5 220.8 231.8 216.7 228.9 211.4C226.0 206.0 235.5 195.9 237.5 187.6C239.5 179.4 235.0 166.7 240.7 161.8C246.4 156.9 264.2 156.3 271.7 158.3C279.2 160.4 282.0 170.3 285.7 174.1C289.5 177.9 295.3 175.9 294.2 181.0Z' fill='%23e0451f'/%3E%3Cpath d='M503.5 15.0C502.9 19.9 490.5 28.4 485.0 32.4C479.5 36.3 475.1 38.3 470.6 38.6C466.0 38.9 462.1 36.8 457.7 34.0C453.4 31.1 447.6 27.9 444.6 21.5C441.5 15.1 436.5 1.1 439.5 -4.4C442.4 -9.8 453.9 -12.4 462.0 -11.2C470.2 -10.0 481.6 -1.4 488.6 3.0C495.5 7.3 504.1 10.1 503.5 15.0Z' fill='%23ffd21f'/%3E%3Cpath d='M496.8 320.9C497.7 328.4 503.3 335.4 500.1 340.9C496.8 346.4 488.1 355.1 477.5 353.7C466.8 352.4 440.9 339.4 436.1 332.8C431.4 326.3 446.1 319.8 448.8 314.6C451.6 309.5 449.3 306.8 452.6 301.9C455.9 297.1 461.5 286.4 468.6 285.4C475.6 284.3 489.9 289.6 494.6 295.6C499.4 301.5 495.9 313.3 496.8 320.9Z' fill='%23ffd21f'/%3E%3Cpath d='M126.6 245.0C128.6 250.2 128.6 251.3 122.5 255.6C116.3 259.9 98.5 269.4 89.6 270.8C80.7 272.3 72.0 269.6 69.0 264.2C65.9 258.8 71.0 244.7 71.3 238.6C71.7 232.4 65.8 230.8 71.3 227.1C76.7 223.5 97.6 217.1 104.1 216.6C110.6 216.2 106.5 219.6 110.2 224.3C114.0 229.1 124.6 239.8 126.6 245.0Z' fill='%23ffd21f'/%3E%3Cpath d='M425.4 112.5C425.7 116.3 425.0 121.3 422.4 124.2C419.8 127.0 414.8 130.6 409.8 129.8C404.8 129.1 396.2 122.2 392.5 119.6C388.8 116.9 386.9 117.5 387.6 114.0C388.3 110.4 393.7 101.9 396.8 98.2C400.0 94.5 402.5 91.1 406.5 91.5C410.4 92.0 417.4 97.6 420.6 101.1C423.7 104.5 425.1 108.6 425.4 112.5Z' fill='%23ffd21f'/%3E%3Cpath d='M245.1 234.0C244.0 238.9 232.1 241.5 227.1 245.5C222.2 249.4 221.6 256.9 215.5 257.9C209.4 258.9 197.4 255.1 190.3 251.5C183.2 247.9 174.0 242.6 172.9 236.4C171.7 230.2 176.6 218.0 183.3 214.4C189.9 210.8 204.5 214.5 212.9 214.7C221.4 215.0 228.6 212.9 234.0 216.1C239.3 219.3 246.2 229.1 245.1 234.0Z' fill='%23ffd21f'/%3E%3Cpath d='M96.0 124.1C96.3 127.2 99.3 131.6 95.9 135.1C92.5 138.6 82.9 143.7 75.6 144.9C68.2 146.1 55.8 145.9 51.8 142.3C47.9 138.8 49.9 127.6 51.7 123.5C53.6 119.4 58.0 120.7 62.7 117.7C67.4 114.7 74.7 105.9 79.9 105.7C85.1 105.6 91.1 113.7 93.8 116.7C96.4 119.8 95.6 121.0 96.0 124.1Z' fill='%23ffd21f'/%3E%3Cpath d='M95.6 70.4C95.4 77.5 83.1 88.2 78.2 93.1C73.3 98.0 72.7 100.4 66.0 99.7C59.3 98.9 45.0 93.9 38.1 88.5C31.2 83.0 24.6 74.3 24.6 66.9C24.6 59.6 32.0 50.1 37.9 44.5C43.8 38.8 53.2 31.9 60.1 32.9C67.0 33.9 73.4 44.2 79.4 50.4C85.3 56.7 95.8 63.3 95.6 70.4Z' fill='%23ffd21f'/%3E%3Cpath d='M360.2 94.6C360.5 100.1 353.6 110.3 347.4 115.8C341.2 121.4 330.5 128.1 323.1 128.0C315.6 127.8 308.5 119.8 302.5 114.8C296.6 109.7 287.7 105.0 287.3 97.5C287.0 90.0 294.8 74.1 300.4 69.7C306.1 65.3 313.6 69.0 321.1 71.2C328.6 73.4 339.0 79.0 345.6 82.9C352.1 86.8 359.9 89.1 360.2 94.6Z' fill='%23ffd21f'/%3E%3Cpath d='M129.8 15.1C129.7 18.4 127.9 20.8 125.7 22.9C123.4 25.1 119.6 28.3 116.2 28.0C112.9 27.7 109.1 23.0 105.4 21.1C101.8 19.2 95.6 19.5 94.5 16.5C93.4 13.5 95.0 5.4 98.9 3.0C102.8 0.6 113.4 2.1 118.0 2.1C122.5 2.1 124.2 0.9 126.2 3.1C128.1 5.2 129.8 11.8 129.8 15.1Z' fill='%238a140c'/%3E%3Cpath d='M126.4 318.5C126.4 322.2 127.0 325.8 125.0 327.4C123.0 329.0 117.9 329.0 114.5 328.2C111.1 327.3 106.5 323.9 104.7 322.2C102.9 320.4 104.3 320.1 103.7 317.9C103.1 315.7 100.0 311.5 101.2 309.1C102.5 306.7 107.0 304.3 111.0 303.7C114.9 303.0 122.3 302.7 124.9 305.2C127.5 307.7 126.4 314.8 126.4 318.5Z' fill='%238a140c'/%3E%3Cpath d='M56.6 -24.1C57.5 -19.1 53.6 -11.3 49.3 -7.8C45.1 -4.2 38.1 -5.0 31.1 -2.8C24.2 -0.6 14.0 8.0 7.8 5.4C1.7 2.8 -6.8 -10.8 -5.6 -18.4C-4.4 -25.9 9.6 -35.5 15.1 -39.9C20.6 -44.2 22.7 -45.0 27.6 -44.6C32.4 -44.3 39.1 -41.1 44.0 -37.7C48.8 -34.2 55.7 -29.1 56.6 -24.1Z' fill='%238a140c'/%3E%3Cpath d='M48.0 282.4C47.5 286.6 46.1 284.8 43.7 287.5C41.2 290.1 39.6 297.0 33.1 298.2C26.6 299.3 9.2 297.3 4.6 294.4C-0.0 291.5 3.8 284.9 5.4 280.9C6.9 277.0 9.4 273.5 13.9 270.5C18.4 267.6 26.8 264.7 32.3 263.3C37.7 261.9 44.0 259.0 46.6 262.1C49.3 265.3 48.5 278.1 48.0 282.4Z' fill='%238a140c'/%3E%3Cpath d='M577.9 -20.6C579.8 -15.3 580.9 -12.8 574.8 -7.7C568.8 -2.6 549.4 10.1 541.7 10.0C534.0 9.9 532.1 -3.2 528.7 -8.3C525.2 -13.4 519.9 -15.5 521.0 -20.4C522.1 -25.2 531.4 -34.4 535.3 -37.5C539.2 -40.6 539.5 -38.9 544.3 -39.2C549.1 -39.6 558.4 -42.7 564.0 -39.6C569.6 -36.5 576.1 -25.9 577.9 -20.6Z' fill='%238a140c'/%3E%3Cpath d='M568.5 281.3C568.8 286.4 570.8 290.1 568.0 294.7C565.3 299.4 558.8 308.6 552.0 309.3C545.2 309.9 532.9 302.9 527.2 298.6C521.6 294.3 517.8 289.1 518.1 283.5C518.5 278.0 523.5 270.9 529.5 265.5C535.5 260.1 547.7 251.5 553.9 251.2C560.1 251.0 564.2 259.0 566.6 264.0C569.0 269.0 568.3 276.2 568.5 281.3Z' fill='%238a140c'/%3E%3Cpath d='M297.1 107.3C296.0 112.5 299.7 114.3 297.3 117.9C294.8 121.4 288.7 127.2 282.2 128.5C275.7 129.9 262.2 128.9 258.1 125.9C254.0 123.0 257.2 116.7 257.4 110.9C257.6 105.0 257.0 95.3 259.2 91.0C261.5 86.6 263.7 85.2 271.1 84.5C278.5 83.8 299.2 83.0 303.5 86.8C307.8 90.6 298.1 102.1 297.1 107.3Z' fill='%238a140c'/%3E%3Cpath d='M320.1 15.9C318.3 19.2 310.6 22.6 307.0 25.0C303.3 27.4 301.7 30.0 298.2 30.4C294.6 30.9 288.1 30.5 285.6 27.8C283.1 25.0 283.3 16.9 283.3 13.9C283.4 10.8 283.2 10.8 286.0 9.6C288.9 8.3 294.9 7.0 300.2 6.3C305.5 5.7 314.5 3.9 317.8 5.5C321.1 7.1 322.0 12.7 320.1 15.9Z' fill='%238a140c'/%3E%3Cpath d='M321.6 319.1C322.0 324.2 317.2 328.2 313.8 329.8C310.3 331.5 305.4 329.5 300.7 329.0C296.0 328.5 288.0 328.7 285.6 327.0C283.3 325.3 286.9 322.3 286.4 318.7C286.0 315.1 280.6 308.4 282.8 305.2C285.0 301.9 295.0 300.3 299.7 299.3C304.4 298.2 307.4 295.7 311.1 299.0C314.7 302.3 321.2 313.9 321.6 319.1Z' fill='%238a140c'/%3E%3C/svg%3E");
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 1rem);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+[hidden]{display:none!important}
+body{margin:0;background:var(--blush);color:var(--ink);font-family:'Fredoka',system-ui,sans-serif;font-size:1.1rem;line-height:1.5;font-weight:500}
+h1,h2{font-family:'Bowlby One','Fredoka',Impact,sans-serif;font-weight:400;text-transform:uppercase;line-height:1.05;margin:0}
+a{color:inherit}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.wrap{max-width:66rem;margin:0 auto;padding:0 1.25rem}
+.col{max-width:40rem;margin:0 auto}
+.pill{display:inline-block;background:var(--sun);color:var(--ink);border:2px solid var(--ink);border-radius:999px;padding:.2rem .9rem;font-family:'Bowlby One',sans-serif;font-size:.85rem;text-transform:uppercase;line-height:1.3;transform:rotate(-5deg)}
+.btn{display:inline-block;background:var(--sun);color:var(--ink);border:2px solid var(--ink);border-radius:999px;padding:.7rem 1.7rem;font-family:'Bowlby One',sans-serif;font-size:1.05rem;text-transform:uppercase;text-decoration:none;box-shadow:0 4px 0 var(--ink);transition:transform .1s,box-shadow .1s;cursor:pointer;text-align:center}
+.btn:hover{transform:translateY(2px);box-shadow:0 2px 0 var(--ink)}
+.btn.big{font-size:1.35rem;padding:1rem 2.4rem;box-shadow:0 5px 0 var(--ink)}
+.btn.big:hover{box-shadow:0 3px 0 var(--ink)}
+.btn.plain{background:var(--paper)}
+.btn[disabled]{opacity:.75;cursor:progress;transform:none;box-shadow:0 4px 0 var(--ink)}
+
+/* Header */
+.top{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.1rem 0}
+.brand{display:flex;align-items:center;gap:.8rem;text-decoration:none}
+.brand img{width:4.25rem;height:auto;flex:none}
+.brand span{font-family:'Rubik Spray Paint','Bowlby One',sans-serif;color:var(--deep);font-size:clamp(1.15rem,4.2vw,1.7rem);line-height:1.1;text-transform:uppercase;letter-spacing:.04em}
+.home{font-weight:600;white-space:nowrap;font-size:1rem}
+
+/* Intro */
+.intro{padding:1.25rem 0 2.75rem}
+.intro .pill{margin-bottom:1.1rem}
+h1{font-size:clamp(2.6rem,10vw,4.6rem);margin-bottom:1rem}
+.lead{margin:0 0 1.6rem;font-size:1.2rem;line-height:1.55}
+.facts{display:grid;grid-template-columns:1fr;gap:.7rem;margin:0}
+.facts div{background:var(--paper);border:2px solid var(--ink);border-radius:1.1rem;padding:.7rem 1rem}
+.facts dt{font-weight:600;color:var(--deep)}
+.facts dd{margin:0;line-height:1.4}
+@media (min-width:640px){.facts{grid-template-columns:repeat(3,1fr)}}
+
+/* Form section */
+.book{background:var(--camo-ry) 0 0/520px 300px,var(--red);padding:3.25rem 0 3.75rem}
+.card{position:relative;background:var(--paper);border:3px solid var(--ink);border-radius:2rem;padding:2.4rem 1.2rem 2rem}
+.card>.pill{position:absolute;top:-1rem;right:1.4rem}
+@media (min-width:560px){.card{padding:2.8rem 2.25rem 2.4rem}}
+.siblings{margin:0 0 1.6rem;font-size:1rem;color:var(--muted)}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+legend{float:left;width:100%;padding:0}
+legend+*{clear:both}
+.sec+.sec{border-top:2px dashed rgba(58,11,7,.3);margin-top:1.8rem;padding-top:1.8rem}
+.sec-h{display:flex;align-items:center;gap:.7rem;font-family:'Bowlby One',sans-serif;text-transform:uppercase;font-size:1.45rem;line-height:1.1;margin-bottom:1.15rem}
+.num{display:inline-grid;place-items:center;width:2.1rem;height:2.1rem;border-radius:50%;background:var(--sun);border:2px solid var(--ink);font-size:1rem;flex:none}
+.grid2{display:grid;gap:0 1rem}
+@media (min-width:560px){.grid2{grid-template-columns:1fr 1fr}}
+.field{margin-bottom:1.15rem}
+.lbl{display:block;font-weight:600;margin-bottom:.35rem}
+.opt{font-weight:500;color:var(--muted)}
+.hint{display:block;font-size:.95rem;color:var(--muted);margin:-.15rem 0 .45rem;line-height:1.4}
+input[type=text],input[type=email],input[type=tel],input[type=date],select,textarea{display:block;width:100%;font:inherit;font-size:1.05rem;font-weight:500;color:var(--ink);background:#fff;border:2px solid var(--ink);border-radius:.9rem;padding:.75rem .95rem;min-height:3.25rem;line-height:1.3;-webkit-appearance:none;appearance:none}
+select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 10'%3E%3Cpath d='M1.5 1.5 8 8l6.5-6.5' fill='none' stroke='%233a0b07' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;background-size:1rem;padding-right:2.8rem;cursor:pointer}
+textarea{min-height:6.5rem;resize:vertical}
+input:focus-visible,select:focus-visible,textarea:focus-visible{outline:none;box-shadow:0 0 0 4px var(--sun),0 0 0 6px var(--ink)}
+.bad input,.bad select,.bad textarea{border-color:var(--red);background-color:#fff6f4}
+.err{margin:.4rem 0 0;color:var(--deep);font-weight:600;font-size:.95rem;line-height:1.35}
+.err:empty{display:none}
+.choices{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center}
+.choices~.err{text-align:center}
+.choice{position:relative;display:block}
+.choice input{position:absolute;opacity:0;width:1px;height:1px;margin:0}
+.choice span{display:inline-block;min-width:7rem;padding:.6rem 1.1rem;border:2px solid var(--ink);border-radius:999px;background:#fff;font-weight:600;text-align:center;cursor:pointer;transition:background .1s}
+.choice input:checked+span{background:var(--sun);box-shadow:0 3px 0 var(--ink)}
+.choice input:focus-visible+span{box-shadow:0 0 0 4px var(--sun),0 0 0 6px var(--ink)}
+.bad .choice span{border-color:var(--red)}
+.submit{margin-top:1.9rem;text-align:center}
+.submit .btn{width:100%}
+@media (min-width:560px){.submit .btn{width:auto}}
+.assure{margin:1.1rem auto 0;max-width:30rem;font-size:.95rem;color:var(--muted);line-height:1.45;text-align:center}
+.alert{margin:1.2rem 0 0;padding:.9rem 1rem;border:2px solid var(--red);border-radius:1rem;background:#fff;font-weight:600;line-height:1.45}
+.alert a{color:var(--deep)}
+/* Free trial calendar */
+.cal{background:#fff;border:2px solid var(--ink);border-radius:1.1rem;padding:.75rem .7rem .9rem;max-width:25rem;margin:0 auto}
+.cal-head{display:flex;align-items:center;justify-content:space-between;gap:.5rem;margin-bottom:.5rem}
+.cal-title{margin:0;flex:1;text-align:center;font-family:'Bowlby One',sans-serif;text-transform:uppercase;font-size:1.05rem;line-height:1.15}
+.cal-term{display:block;margin-top:.15rem;font-family:'Fredoka',sans-serif;text-transform:none;font-size:.85rem;font-weight:600;color:var(--muted)}
+.cal-nav{flex:none;width:2.6rem;height:2.6rem;border-radius:50%;border:2px solid var(--ink);background:var(--paper);color:var(--ink);font:400 1.5rem/1 'Bowlby One',sans-serif;box-shadow:0 3px 0 var(--ink);cursor:pointer;padding:0 0 .15rem}
+.cal-nav:hover{transform:translateY(1px);box-shadow:0 2px 0 var(--ink)}
+.cal-nav[disabled]{opacity:.25;cursor:default;transform:none;box-shadow:none}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:.25rem}
+.cal-dow{text-align:center;font-size:.8rem;font-weight:600;color:var(--muted);padding:.2rem 0 .3rem}
+.cal-dow.sat{color:var(--ink)}
+.day{display:flex;align-items:center;justify-content:center;aspect-ratio:1;border-radius:50%;font-size:1rem;line-height:1}
+.day.off{color:rgba(58,11,7,.28)}
+button.day{border:2px solid var(--ink);background:var(--paper);color:var(--ink);font:inherit;font-weight:600;cursor:pointer;padding:0;min-width:0}
+button.day:hover{background:var(--blush)}
+button.day[aria-pressed=true]{background:var(--sun);box-shadow:0 3px 0 var(--ink)}
+.cal-nav:focus-visible,button.day:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.cal-msg{margin:1.2rem 0;text-align:center;color:var(--muted);font-weight:600}
+.cal-picked{margin:.6rem 0 0;font-weight:600;text-align:center}
+.cal-picked:empty{display:none}
+.bad .cal{border-color:var(--red)}
+.day.wait{border:2px dashed rgba(58,11,7,.25)}
+.cal-sels{flex:1;display:flex;gap:.4rem;justify-content:center;min-width:0}
+.cal .cal-sel{display:inline-block;width:auto;min-width:0;min-height:2.5rem;padding:.3rem 1.8rem .3rem .65rem;font-size:.95rem;font-weight:600;border-radius:.7rem;background-position:right .55rem center;background-size:.7rem}
+.dob-row{display:flex;gap:.6rem;align-items:stretch}
+.dob-row input{flex:1;min-width:0}
+.cal-toggle{flex:none;width:3.4rem;border:2px solid var(--ink);border-radius:.9rem;background:var(--sun);color:var(--ink);cursor:pointer;display:grid;place-items:center;box-shadow:0 3px 0 var(--ink);padding:0}
+.cal-toggle[aria-expanded=true]{background:var(--paper)}
+.cal-toggle svg{width:1.6rem;height:1.6rem}
+.cal-toggle:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.cal-dob{margin-top:.7rem}
+.keypoints{margin:.1rem 0 .9rem;padding-left:1.2rem}
+.keypoints li{margin:.25rem 0}
+.terms{margin:0 0 1.1rem;border:2px solid var(--ink);border-radius:1rem;background:#fff}
+.terms summary{cursor:pointer;list-style:none;padding:.7rem 1rem;font-weight:600;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.terms summary::-webkit-details-marker{display:none}
+.terms summary::after{content:"+";font-family:'Bowlby One',sans-serif;font-size:1.3rem;line-height:1;color:var(--red)}
+.terms[open] summary::after{content:"\2212"}
+.terms summary:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:.8rem}
+.terms-body{padding:0 1rem 1rem;font-size:.95rem;line-height:1.5;max-height:24rem;overflow-y:auto;overscroll-behavior:contain}
+.terms-body:focus-visible{outline:3px solid var(--ink);outline-offset:-3px}
+.terms-body h3{font-family:'Bowlby One',sans-serif;font-weight:400;text-transform:uppercase;font-size:.95rem;margin:1rem 0 .3rem}
+.terms-body p,.terms-body ul{margin:0 0 .5rem}
+.terms-body ul{padding-left:1.1rem}
+.terms-body li{margin:.2rem 0}
+.tick{display:flex;gap:.75rem;align-items:flex-start;cursor:pointer;font-weight:600;line-height:1.35}
+.tick input{flex:none;width:1.6rem;height:1.6rem;margin:0;accent-color:var(--ink);cursor:pointer}
+.tick input:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.bad .tick input{outline:2px solid var(--red);outline-offset:2px}
+.bad .cal .cal-sel{border-color:var(--ink);background-color:#fff}
+@media (prefers-reduced-motion:reduce){.cal-nav{transition:none}}
+.hp{position:absolute!important;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
+
+/* Success */
+.done h2{font-size:clamp(1.9rem,6.5vw,2.8rem);margin:0 3.5rem 1.1rem 0;outline:none}
+.done p{margin:0 0 1rem}
+.done .star{position:absolute;top:1.6rem;right:1.4rem;width:3.4rem;height:3.4rem;transform:rotate(12deg)}
+.actions{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:1.6rem;justify-content:center}
+
+footer{background:var(--deep);color:var(--cream);text-align:center;padding:1.3rem 1.25rem;font-size:.95rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.choice span{transition:none}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+ <header class="top">
+  <a class="brand" href="/"><img src="data:image/webp;base64,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" alt="Muddy Knees Kids Rugby logo" width="200" height="203"><span>Muddy Knees Kids Rugby</span></a>
+  <a class="home" href="/">Back to home</a>
+ </header>
+</div>
+
+<main>
+<section class="intro"><div class="wrap"><div class="col">
+ <span class="pill">First session free</span>
+ <h1>Book a free trial</h1>
+ <p class="lead">Saturday morning rugby on Tooting Common for children aged 2 to 7. Tell us about your child and we'll be in touch with everything you need for their first session.</p>
+ <dl class="facts">
+  <div><dt>When</dt><dd>Saturdays in term time, 10am to 11am</dd></div>
+  <div><dt>Where</dt><dd>Tooting Common SW17, opposite the Rose and Crown pub</dd></div>
+  <div><dt>Cost</dt><dd>First session free, with no obligation to sign up</dd></div>
+ </dl>
+</div></div></section>
+
+<section class="book" id="book" aria-label="Booking form"><div class="wrap"><div class="col">
+ <div class="card">
+  <span class="pill">Free trial</span>
+
+  <noscript><p class="alert">This form needs JavaScript switched on. To book, email us at <a href="mailto:ukkidsrugby@gmail.com">ukkidsrugby@gmail.com</a>.</p></noscript>
+
+  <form id="booking" novalidate>
+   <p class="siblings">Booking for siblings? Book one child at a time. We'll keep your details so the next one is quicker.</p>
+
+   <fieldset class="sec">
+    <legend><span class="sec-h"><span class="num" aria-hidden="true">1</span>Your child</span></legend>
+    <div class="grid2">
+     <div class="field" data-type="text" data-msg="Enter your child's first name.">
+      <label class="lbl" for="child-first">First name</label>
+      <input type="text" id="child-first" name="Child's first name" autocomplete="off" autocapitalize="words" required aria-describedby="err-child-first">
+      <p class="err" id="err-child-first" aria-live="polite"></p>
+     </div>
+     <div class="field" data-type="text" data-msg="Enter your child's last name.">
+      <label class="lbl" for="child-last">Last name</label>
+      <input type="text" id="child-last" name="Child's last name" autocomplete="off" autocapitalize="words" required aria-describedby="err-child-last">
+      <p class="err" id="err-child-last" aria-live="polite"></p>
+     </div>
+    </div>
+    <div class="field" id="dob-field" data-type="dob" data-msg="Enter your child's date of birth.">
+     <label class="lbl" for="child-dob">Date of birth</label>
+     <span class="hint" id="hint-dob">Type it as DD/MM/YYYY or pick it from the calendar. We use it to place your child in the right group.</span>
+     <div class="dob-row">
+      <input type="text" id="child-dob" inputmode="numeric" autocomplete="off" placeholder="DD/MM/YYYY" maxlength="10" aria-describedby="hint-dob err-child-dob">
+      <button type="button" class="cal-toggle" id="dob-toggle" aria-expanded="false" aria-controls="dob-cal" aria-label="Pick the date of birth from a calendar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16.5" rx="3"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></svg></button>
+     </div>
+     <input type="hidden" id="child-dob-iso" name="Child's date of birth">
+     <div class="cal cal-dob" id="dob-cal" role="group" aria-label="Date of birth calendar" hidden></div>
+     <p class="err" id="err-child-dob" aria-live="polite"></p>
+    </div>
+    <div class="field" id="trial-field" data-type="calendar" data-msg="Choose a date for the free trial.">
+     <span class="lbl" id="lbl-trial">Free trial date</span>
+     <span class="hint" id="hint-trial">Choose one of the highlighted Saturdays. Half term and holidays are greyed out.</span>
+     <input type="hidden" id="trial" name="When would you like your free trial ">
+     <div class="cal" id="cal" role="group" aria-labelledby="lbl-trial" aria-describedby="hint-trial err-trial"><p class="cal-msg">Loading dates...</p></div>
+     <p class="cal-picked" id="trial-picked" aria-live="polite"></p>
+     <p class="err" id="err-trial" aria-live="polite"></p>
+    </div>
+    <fieldset class="field" id="session-field" data-type="radio" data-msg="Choose a session time.">
+     <legend class="lbl">Session time</legend>
+     <div class="choices" id="session-choices"></div>
+     <p class="err" id="err-session" aria-live="polite"></p>
+    </fieldset>
+   </fieldset>
+
+   <fieldset class="sec">
+    <legend><span class="sec-h"><span class="num" aria-hidden="true">2</span>You</span></legend>
+    <fieldset class="field" data-type="radio" data-msg="Tell us whether you're their parent or guardian.">
+     <legend class="lbl">Are you their parent or guardian?</legend>
+     <div class="choices">
+      <label class="choice"><input type="radio" name="Are you a parent or guardian?" value="Parent" aria-describedby="err-rel"><span>Parent</span></label>
+      <label class="choice"><input type="radio" name="Are you a parent or guardian?" value="Guardian" aria-describedby="err-rel"><span>Guardian</span></label>
+     </div>
+     <p class="err" id="err-rel" aria-live="polite"></p>
+    </fieldset>
+    <div class="grid2">
+     <div class="field" data-type="text" data-msg="Enter your first name.">
+      <label class="lbl" for="parent-first">First name</label>
+      <input type="text" id="parent-first" name="First name of parent/guardian" autocomplete="given-name" autocapitalize="words" required aria-describedby="err-parent-first">
+      <p class="err" id="err-parent-first" aria-live="polite"></p>
+     </div>
+     <div class="field" data-type="text" data-msg="Enter your last name.">
+      <label class="lbl" for="parent-last">Last name</label>
+      <input type="text" id="parent-last" name="Last name of parent/guardian" autocomplete="family-name" autocapitalize="words" required aria-describedby="err-parent-last">
+      <p class="err" id="err-parent-last" aria-live="polite"></p>
+     </div>
+    </div>
+    <div class="field" data-type="email" data-msg="Enter your email address.">
+     <label class="lbl" for="email">Email</label>
+     <span class="hint" id="hint-email">We'll send your session details here.</span>
+     <input type="email" id="email" name="Email" autocomplete="email" inputmode="email" spellcheck="false" required aria-describedby="hint-email err-email">
+     <p class="err" id="err-email" aria-live="polite"></p>
+    </div>
+    <div class="field" data-type="tel" data-msg="Enter your mobile number.">
+     <label class="lbl" for="phone">Mobile number</label>
+     <span class="hint" id="hint-phone">In case we need to reach you on the day.</span>
+     <input type="tel" id="phone" name="Phone number" autocomplete="tel" inputmode="tel" required aria-describedby="hint-phone err-phone">
+     <p class="err" id="err-phone" aria-live="polite"></p>
+    </div>
+   </fieldset>
+
+   <fieldset class="sec">
+    <legend><span class="sec-h"><span class="num" aria-hidden="true">3</span>Anything else</span></legend>
+    <div class="field" data-type="select" data-msg="Tell us how you heard about us.">
+     <label class="lbl" for="heard">How did you hear about us?</label>
+     <select id="heard" name="How did you originally hear about us?" required aria-describedby="err-heard"><option value="">Choose one</option></select>
+     <p class="err" id="err-heard" aria-live="polite"></p>
+    </div>
+    <div class="field" id="ref-field" hidden>
+     <label class="lbl" for="ref">Referral code <span class="opt">(optional)</span></label>
+     <span class="hint" id="hint-ref">If a friend gave you a referral code, add it here.</span>
+     <input type="text" id="ref" name="Referral code" autocomplete="off" autocapitalize="characters" spellcheck="false" disabled aria-describedby="hint-ref">
+    </div>
+    <div class="field">
+     <label class="lbl" for="notes">Anything we should know? <span class="opt">(optional)</span></label>
+     <span class="hint" id="hint-notes">For example allergies, medical conditions or additional needs.</span>
+     <textarea id="notes" name="Is there any other information we should be aware of?" aria-describedby="hint-notes"></textarea>
+    </div>
+   </fieldset>
+
+   <fieldset class="sec">
+    <legend><span class="sec-h"><span class="num" aria-hidden="true">4</span>Before you book</span></legend>
+    <fieldset class="field" data-type="radio" data-msg="Choose yes or no for photos.">
+     <legend class="lbl">Can we use photos and videos of your child in our marketing?</legend>
+     <span class="hint" id="hint-photo">For example on our website, social media, flyers and adverts. We never publish children's full names. Your answer won't affect your booking.</span>
+     <div class="choices">
+      <label class="choice"><input type="radio" name="Photo consent" value="Yes" aria-describedby="hint-photo err-photo"><span>Yes, that's fine</span></label>
+      <label class="choice"><input type="radio" name="Photo consent" value="No" aria-describedby="hint-photo err-photo"><span>No thanks</span></label>
+     </div>
+     <p class="err" id="err-photo" aria-live="polite"></p>
+    </fieldset>
+    <div class="field" data-type="checkbox" data-msg="Tick the box to agree to our terms.">
+     <span class="lbl">Our terms in brief</span>
+     <ul class="keypoints">
+      <li>A parent, guardian or responsible adult stays and watches for the whole session.</li>
+      <li>Tell us about any medical conditions, allergies or additional needs.</li>
+      <li>Term fees are paid in advance and aren't usually refundable.</li>
+     </ul>
+     <details class="terms">
+      <summary>Read the full terms</summary>
+      <div class="terms-body" tabindex="0" role="region" aria-label="Full terms">
+       <h3>Who we are</h3>
+       <p>Muddy Knees Kids Rugby is a trading name of UK Kids Rugby Ltd ("we", "us"). These terms apply to every child you book with us, including the free trial. You can contact us at <a href="mailto:ukkidsrugby@gmail.com">ukkidsrugby@gmail.com</a>.</p>
+       <h3>Staying and watching</h3>
+       <p>A parent, guardian or responsible adult you have arranged must stay for the whole session. You remain responsible for your child throughout, including before and after the session, during the break and for toilet trips.</p>
+       <h3>Health and safety</h3>
+       <ul>
+        <li>Tell us about any medical conditions, allergies, injuries or additional needs before your child's first session, and let us know if anything changes.</li>
+        <li>Bring any medication your child might need, such as an inhaler. You remain responsible for giving it.</li>
+        <li>Only bring your child if they are well enough to take part.</li>
+        <li>Children must follow the coaches' instructions. We may pause or stop a child taking part if we think it isn't safe for them or others.</li>
+        <li>Our sessions are non-contact (tag and touch rugby) and our coaches are qualified. Rugby is still a physical, outdoor activity and minor bumps and scrapes can happen. Nothing in these terms limits our liability for injury caused by our negligence.</li>
+        <li>Please keep belongings with you. We can't be responsible for lost or damaged items.</li>
+       </ul>
+       <h3>Free trial and payment</h3>
+       <ul>
+        <li>Your child's first session is a free trial, with no obligation to carry on.</li>
+        <li>If you'd like to continue, we'll email you a payment link for the rest of the term. Your child's place is confirmed once you've paid.</li>
+        <li>Fees are paid in advance for the whole term. We don't give refunds for missed sessions or if your child stops coming part way through a term. In exceptional circumstances, such as a serious injury or moving away, we may offer a refund at our discretion. Just email us.</li>
+       </ul>
+       <h3>If we have to cancel</h3>
+       <p>We've never had to cancel a session. If we ever need to because of bad weather or for safety reasons, we'll let you know as early as we can by email or WhatsApp. We don't give refunds for cancelled sessions, but we'll try to offer a make-up session where we can.</p>
+       <h3>Photos and videos</h3>
+       <ul>
+        <li>We ask separately whether we can use photos and videos of your child. Your answer doesn't affect your booking.</li>
+        <li>If you say yes, we may use them in any of our marketing, including our website, social media, printed materials and online adverts. We'll never publish your child's full name.</li>
+        <li>If you say no, we won't use photos or videos in which your child can be recognised. We may still use images where they can't be, for example taken from behind or at a distance with their face not visible.</li>
+        <li>You can change your mind at any time by emailing us. We'll stop using new images of your child and remove existing ones from our website and social media where we can. We can't recall printed materials that have already been handed out.</li>
+        <li>Please only share photos or videos of your own child, unless the other child's parent agrees.</li>
+       </ul>
+       <h3>Your details</h3>
+       <ul>
+        <li>We use the details you give us to run sessions, keep children safe, take payments and contact you. We store them securely with the services we use to run the club, such as Airtable for our records, Stripe for payments, Gmail and Brevo for emails, and WhatsApp for session updates.</li>
+        <li>If you tell us about your child's health, we use it only to keep them safe at sessions and share it only with our coaches.</li>
+        <li>We'll send you updates about Muddy Knees, including future terms. You can unsubscribe at any time.</li>
+        <li>We keep your details only for as long as we need them, including to meet our accounting obligations. We never sell your details.</li>
+        <li>You can ask to see, correct or delete your details by emailing us. You can also complain to the Information Commissioner's Office at <a href="https://ico.org.uk" target="_blank" rel="noopener">ico.org.uk</a>.</li>
+       </ul>
+       <h3>Changes to these terms</h3>
+       <p>We may update these terms from time to time and will tell you about any important changes. Version: October 2026.</p>
+      </div>
+     </details>
+     <label class="tick"><input type="checkbox" name="Terms accepted" value="Yes" aria-describedby="err-terms"><span>I've read and agree to the Muddy Knees terms</span></label>
+     <input type="hidden" name="Terms version" value="October 2026">
+     <p class="err" id="err-terms" aria-live="polite"></p>
+    </div>
+   </fieldset>
+
+   <!-- Tracking fields, filled automatically from the page address -->
+   <input type="hidden" name="utm_source">
+   <input type="hidden" name="utm_medium">
+   <input type="hidden" name="utm_campaign">
+   <input type="hidden" name="utm_content">
+   <input type="hidden" name="utm_term">
+   <input type="hidden" name="gclid">
+   <input type="hidden" name="fbclid">
+   <input type="hidden" name="landing_page">
+   <input type="hidden" name="referrer">
+
+   <!-- Spam trap: real people never see or fill this -->
+   <div class="hp" aria-hidden="true"><label for="website">Leave this empty</label><input type="text" id="website" name="website" tabindex="-1" autocomplete="off"></div>
+
+   <div class="submit">
+    <button class="btn big" type="submit" id="submit-btn">Book my free trial</button>
+    <p class="alert" id="form-alert" role="alert" hidden></p>
+    <p class="assure">Our coaches are qualified. We only use your details to organise your child's sessions and keep you updated about Muddy Knees.</p>
+   </div>
+  </form>
+
+  <div class="done" id="done" hidden>
+   <svg class="star" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 4C54 32 68 46 96 50C68 54 54 68 50 96C46 68 32 54 4 50C32 46 46 32 50 4Z" fill="#ffd51a" stroke="#3a0b07" stroke-width="4" stroke-linejoin="round"/></svg>
+   <h2 id="done-title" tabindex="-1">Thanks, we've got your booking</h2>
+   <p>See you on <strong id="done-date">Saturday</strong>. We've sent a confirmation email to <strong id="done-email"></strong>. If it isn't in your inbox in a few minutes, check your junk folder.</p>
+   <p>On the day, come dressed for the weather with a snack and a drink. We meet on Tooting Common, opposite the Rose and Crown pub.</p>
+   <div class="actions">
+    <button class="btn" type="button" id="another-btn">Book another child</button>
+    <a class="btn plain" href="/">Back to the homepage</a>
+   </div>
+  </div>
+ </div>
+</div></div></section>
+</main>
+
+<footer>Muddy Knees Kids Rugby, Tooting Common, London SW17.</footer>
+
+<script>
+(function () {
+  // ===== Settings: the only part you should need to edit =====
+  var CONFIG = {
+    // Production URL of the n8n Webhook node (POST)
+    webhookUrl: 'https://u-mkkr.app.n8n.cloud/webhook/mkkr-booking',
+    // Address of the n8n workflow that lists free trial dates (GET). Set at the top of the page.
+    datesUrl: window.mkDatesUrl,
+    // A Saturday stays bookable until this London time on the day. Keep it the same as CUTOFF in n8n.
+    sameDayCutoff: '10:45',
+    // Returning visitors see the dates saved on their last visit straight away if they're newer than this
+    savedDatesHours: 12,
+    // Shown to parents if the booking fails to send
+    fallbackEmail: 'ukkidsrugby@gmail.com',
+    // Session times. "value" must match what your Edit Fields node expects.
+    // With one entry the question is hidden and that value is sent automatically.
+    sessionTimes: [
+      { label: '10:00am', value: '10 am' }
+      // , { label: '11:15am', value: '11:15 am' }
+    ],
+    // "How did you hear about us?" options. "value" is what reaches Airtable.
+    heardOptions: [
+      { label: 'A friend or family member', value: 'Word of mouth' },
+      { label: 'Instagram', value: 'Instagram' },
+      { label: 'Facebook', value: 'Facebook' },
+      { label: 'Google search', value: 'Google / Search Engine / Maps Search' },
+      { label: 'Saw a session on Tooting Common', value: 'Walked past' },
+      { label: 'School or nursery', value: 'School recommendation' },
+      { label: 'Flyer or poster', value: 'Flyer or poster' },
+      { label: 'Somewhere else', value: 'Other' }
+    ],
+    // The referral code box appears when this option is picked
+    referralTrigger: 'Word of mouth',
+    // Accepted age range for the date of birth check, in months
+    minAgeMonths: 18,
+    maxAgeMonths: 108
+  };
+  // ===========================================================
+
+  var form = document.getElementById('booking');
+  var btn = document.getElementById('submit-btn');
+  var alertBox = document.getElementById('form-alert');
+  var done = document.getElementById('done');
+  var BTN_TEXT = btn.textContent;
+  var startedAt = Date.now();
+  var attempted = false;
+  var sending = false;
+  var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+  // Session time: hide the question if there is only one option
+  var sessionField = document.getElementById('session-field');
+  if (CONFIG.sessionTimes.length === 1) {
+    sessionField.parentNode.removeChild(sessionField);
+    var hiddenSession = document.createElement('input');
+    hiddenSession.type = 'hidden';
+    hiddenSession.name = 'Session time';
+    hiddenSession.value = CONFIG.sessionTimes[0].value;
+    form.appendChild(hiddenSession);
+  } else {
+    var box = document.getElementById('session-choices');
+    CONFIG.sessionTimes.forEach(function (s) {
+      var l = document.createElement('label');
+      l.className = 'choice';
+      var i = document.createElement('input');
+      i.type = 'radio'; i.name = 'Session time'; i.value = s.value;
+      i.setAttribute('aria-describedby', 'err-session');
+      var sp = document.createElement('span');
+      sp.textContent = s.label;
+      l.appendChild(i); l.appendChild(sp); box.appendChild(l);
+    });
+  }
+
+  // How did you hear options
+  var heard = document.getElementById('heard');
+  CONFIG.heardOptions.forEach(function (o) {
+    var opt = document.createElement('option');
+    opt.value = o.value; opt.textContent = o.label;
+    heard.appendChild(opt);
+  });
+
+  // Referral code appears only for word of mouth
+  var refField = document.getElementById('ref-field');
+  var refInput = document.getElementById('ref');
+  heard.addEventListener('change', function () {
+    var show = heard.value === CONFIG.referralTrigger;
+    refField.hidden = !show;
+    refInput.disabled = !show;
+    if (!show) refInput.value = '';
+  });
+
+  // ===== Calendars =====
+  var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  var MONTHS_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  var DAYS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+  function two(n) { return (n < 10 ? '0' : '') + n; }
+  function isoOf(y, m, d) { return y + '-' + two(m + 1) + '-' + two(d); }
+  function toIso(ddmmyyyy) { var p = ddmmyyyy.split('/'); return p[2] + '-' + p[1] + '-' + p[0]; }
+  function toUk(iso) { return iso.slice(8, 10) + '/' + iso.slice(5, 7) + '/' + iso.slice(0, 4); }
+  function niceDate(ddmmyyyy) {
+    var p = ddmmyyyy.split('/');
+    return 'Saturday ' + Number(p[0]) + ' ' + MONTHS[Number(p[1]) - 1];
+  }
+
+  // A small month calendar used for both dates.
+  // opts: min and max as [year, monthIndex], enabled(iso), selected() returning an iso date,
+  // dayLabel(iso), onPick(iso), and optionally caption(year, month), pending(iso, column), dropdowns
+  function makeCalendar(el, opts) {
+    var cal = { opts: opts, y: 0, m: 0 };
+    function idx(y, m) { return y * 12 + m; }
+    cal.show = function (y, m) {
+      var o = cal.opts, lo = idx(o.min[0], o.min[1]), hi = idx(o.max[0], o.max[1]);
+      var i = Math.max(lo, Math.min(hi, idx(y, m)));
+      cal.y = Math.floor(i / 12);
+      cal.m = i % 12;
+      render(i === lo, i === hi);
+    };
+    function render(atStart, atEnd) {
+      var o = cal.opts, y = cal.y, m = cal.m, lo = idx(o.min[0], o.min[1]), hi = idx(o.max[0], o.max[1]);
+      var html = '<div class="cal-head"><button type="button" class="cal-nav" data-step="-1" aria-label="Previous month"' + (atStart ? ' disabled' : '') + '>&lsaquo;</button>';
+      if (o.dropdowns) {
+        html += '<div class="cal-sels"><select class="cal-sel" data-part="m" aria-label="Month">';
+        for (var mm = 0; mm < 12; mm++) {
+          var ok = idx(y, mm) >= lo && idx(y, mm) <= hi;
+          html += '<option value="' + mm + '"' + (mm === m ? ' selected' : '') + (ok ? '' : ' disabled') + '>' + MONTHS_SHORT[mm] + '</option>';
+        }
+        html += '</select><select class="cal-sel" data-part="y" aria-label="Year">';
+        for (var yy = o.max[0]; yy >= o.min[0]; yy--) html += '<option value="' + yy + '"' + (yy === y ? ' selected' : '') + '>' + yy + '</option>';
+        html += '</select></div>';
+      } else {
+        html += '<p class="cal-title" aria-live="polite">' + MONTHS[m] + ' ' + y + '<span class="cal-term"></span></p>';
+      }
+      html += '<button type="button" class="cal-nav" data-step="1" aria-label="Next month"' + (atEnd ? ' disabled' : '') + '>&rsaquo;</button></div><div class="cal-grid">';
+      DAYS.forEach(function (d) { html += '<span class="cal-dow' + (d === 'Sat' && !o.dropdowns ? ' sat' : '') + '" aria-hidden="true">' + d + '</span>'; });
+      var offset = (new Date(Date.UTC(y, m, 1)).getUTCDay() + 6) % 7;   // weeks start on Monday
+      var daysIn = new Date(Date.UTC(y, m + 1, 0)).getUTCDate();
+      for (var i = 0; i < offset; i++) html += '<span class="day" aria-hidden="true"></span>';
+      var picked = o.selected();
+      for (var d = 1; d <= daysIn; d++) {
+        var iso = isoOf(y, m, d);
+        if (o.enabled(iso)) {
+          html += '<button type="button" class="day" data-iso="' + iso + '" aria-pressed="' + (picked === iso) + '" aria-label="' + o.dayLabel(iso) + '">' + d + '</button>';
+        } else {
+          var wait = o.pending && o.pending(iso, (offset + d - 1) % 7);
+          html += '<span class="day off' + (wait ? ' wait' : '') + '" aria-hidden="true">' + d + '</span>';
+        }
+      }
+      el.innerHTML = html + '</div>';
+      var cap = el.querySelector('.cal-term');
+      if (cap) cap.textContent = o.caption ? o.caption(y, m) : '';
+    }
+    el.addEventListener('click', function (e) {
+      var t = e.target;
+      var nav = t.closest ? t.closest('.cal-nav') : null;
+      if (nav && !nav.disabled) {
+        var step = nav.getAttribute('data-step');
+        cal.show(cal.y, cal.m + Number(step));
+        var again = el.querySelector('.cal-nav[data-step="' + step + '"]');
+        var next = (again && !again.disabled) ? again : el.querySelector('.cal-nav:not([disabled])');
+        if (next) next.focus();
+        return;
+      }
+      var day = t.closest ? t.closest('button.day') : null;
+      if (day) cal.opts.onPick(day.getAttribute('data-iso'));
+    });
+    el.addEventListener('change', function (e) {
+      var s = e.target;
+      if (!s.classList || !s.classList.contains('cal-sel')) return;
+      e.stopPropagation();
+      var part = s.getAttribute('data-part');
+      if (part === 'm') cal.show(cal.y, Number(s.value));
+      else cal.show(Number(s.value), cal.m);
+      var again = el.querySelector('.cal-sel[data-part="' + part + '"]');
+      if (again) again.focus();
+    });
+    return cal;
+  }
+
+  // ===== Free trial date: Saturdays from the Airtable Terms table, via n8n =====
+  var trial = document.getElementById('trial');            // sent to n8n as DD/MM/YYYY
+  var trialField = document.getElementById('trial-field');
+  var trialErr = document.getElementById('err-trial');
+  var trialPicked = document.getElementById('trial-picked');
+  var trialCalEl = document.getElementById('cal');
+  var available = {};       // 'YYYY-MM-DD' -> { value: 'DD/MM/YYYY', term: 'Autumn 2026' }
+  var datesState = 'loading';
+  var lastSig = '';
+  var CACHE_KEY = 'mk_trial_dates_v1';
+
+  function termName(label) {
+    return (!label || label === 'Upcoming Saturdays' || /term$/i.test(label)) ? label : label + ' Term';
+  }
+
+  // Today's date and time in London, so a Saturday drops off after the cutoff wherever the visitor is
+  function londonNow() {
+    try {
+      var p = {};
+      new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/London', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' })
+        .formatToParts(new Date()).forEach(function (x) { p[x.type] = x.value; });
+      return { date: p.year + '-' + p.month + '-' + p.day, time: p.hour + ':' + p.minute };
+    } catch (e) {
+      var d = new Date();
+      return { date: isoOf(d.getFullYear(), d.getMonth(), d.getDate()), time: two(d.getHours()) + ':' + two(d.getMinutes()) };
+    }
+  }
+
+  var today0 = new Date();
+  var trialCal = makeCalendar(trialCalEl, {
+    min: [today0.getFullYear(), today0.getMonth()],
+    max: [today0.getFullYear(), today0.getMonth()],
+    enabled: function (iso) { return !!available[iso]; },
+    selected: function () { return trial.value ? toIso(trial.value) : ''; },
+    dayLabel: function (iso) { return niceDate(toUk(iso)) + ' ' + iso.slice(0, 4); },
+    pending: function (iso, col) { return datesState === 'loading' && col === 5; },
+    caption: function (y, m) {
+      if (datesState === 'loading') return 'Loading dates...';
+      if (datesState === 'failed') return 'Dates unavailable';
+      var names = [];
+      Object.keys(available).forEach(function (iso) {
+        if (+iso.slice(0, 4) === y && +iso.slice(5, 7) - 1 === m) {
+          var n = termName(available[iso].term);
+          if (names.indexOf(n) < 0) names.push(n);
+        }
+      });
+      return names.length ? names.join(' and ') : 'No sessions this month';
+    },
+    onPick: function (iso) { selectTrial(toUk(iso)); }
+  });
+  trialCal.show(today0.getFullYear(), today0.getMonth());
+
+  function selectTrial(v) {
+    trial.value = v;
+    var a = available[toIso(v)];
+    trialPicked.textContent = 'Selected: ' + niceDate(v) + ' ' + v.slice(6) + (a && a.term ? ' (' + termName(a.term) + ')' : '');
+    trialCal.show(trialCal.y, trialCal.m);
+    var sel = trialCalEl.querySelector('button.day[aria-pressed="true"]');
+    if (sel) sel.focus();
+    if (attempted || trialField.classList.contains('bad')) check(trialField);
+  }
+
+  // Show a list of dates. Returns false if none are still bookable.
+  function applyDates(groups) {
+    var ln = londonNow();
+    var next = {};
+    (groups || []).forEach(function (g) {
+      (g.dates || []).forEach(function (d) {
+        if (!/^\d{2}\/\d{2}\/\d{4}$/.test(d)) return;
+        var iso = toIso(d);
+        if (iso < ln.date || (iso === ln.date && ln.time >= CONFIG.sameDayCutoff)) return;
+        next[iso] = { value: d, term: String(g.label || '') };
+      });
+    });
+    var isos = Object.keys(next).sort();
+    if (!isos.length) return false;
+    var sig = JSON.stringify(next);
+    if (sig === lastSig) return true;
+    var wasReady = datesState === 'ready';
+    lastSig = sig;
+    available = next;
+    datesState = 'ready';
+    trialCal.opts.min = [+isos[0].slice(0, 4), +isos[0].slice(5, 7) - 1];
+    trialCal.opts.max = [+isos[isos.length - 1].slice(0, 4), +isos[isos.length - 1].slice(5, 7) - 1];
+    if (trial.value && !available[toIso(trial.value)]) { trial.value = ''; trialPicked.textContent = ''; }
+    var focus = trial.value ? toIso(trial.value) : isos[0];
+    if (wasReady) trialCal.show(trialCal.y, trialCal.m);
+    else trialCal.show(+focus.slice(0, 4), +focus.slice(5, 7) - 1);
+    trialErr.textContent = '';
+    if (trialField.classList.contains('bad')) check(trialField);
+    return true;
+  }
+
+  function loadDates(useEarlyRequest) {
+    if (datesState !== 'ready') { datesState = 'loading'; trialCal.show(trialCal.y, trialCal.m); }
+    trialErr.textContent = '';
+    var request = (useEarlyRequest && window.mkDates) ? window.mkDates :
+      fetch(CONFIG.datesUrl).then(function (res) { if (!res.ok) throw new Error('HTTP ' + res.status); return res.json(); });
+    request
+      .then(function (data) {
+        var groups = (data && data.groups) || [];
+        if (!applyDates(groups)) throw new Error('No dates');
+        try { localStorage.setItem(CACHE_KEY, JSON.stringify({ t: Date.now(), groups: groups })); } catch (e) {}
+      })
+      .catch(function (err) {
+        if (window.console) console.error('Trial dates did not load from ' + CONFIG.datesUrl, err);
+        if (datesState === 'ready') return;   // dates saved from an earlier visit are already showing
+        datesState = 'failed';
+        trialCal.show(trialCal.y, trialCal.m);
+        trialErr.innerHTML = 'The session dates did not load. <a href="#" id="retry-dates">Try again</a>, or email us at <a href="mailto:' + CONFIG.fallbackEmail + '">' + CONFIG.fallbackEmail + '</a>.';
+        document.getElementById('retry-dates').addEventListener('click', function (e) { e.preventDefault(); loadDates(false); });
+      });
+  }
+
+  // Returning visitors see the dates saved on their last visit straight away, then the fresh list replaces them
+  try {
+    var saved = JSON.parse(localStorage.getItem(CACHE_KEY) || 'null');
+    if (saved && saved.groups && Date.now() - saved.t < CONFIG.savedDatesHours * 3600000) applyDates(saved.groups);
+  } catch (e) {}
+  loadDates(true);
+
+  // ===== Date of birth: type it or pick it =====
+  var dobText = document.getElementById('child-dob');       // what parents see, DD/MM/YYYY
+  var dobValue = document.getElementById('child-dob-iso');  // sent to n8n as YYYY-MM-DD
+  var dobField = document.getElementById('dob-field');
+  var dobToggle = document.getElementById('dob-toggle');
+  var dobCalEl = document.getElementById('dob-cal');
+  function isoMonthsAgo(months) {
+    var d = new Date();
+    d.setMonth(d.getMonth() - months);
+    return isoOf(d.getFullYear(), d.getMonth(), d.getDate());
+  }
+  var dobMax = isoMonthsAgo(CONFIG.minAgeMonths);
+  var dobMin = isoMonthsAgo(CONFIG.maxAgeMonths);
+  function parseDob(s) {
+    var m = /^(\d{1,2})\/(\d{1,2})\/(\d{4})$/.exec(String(s).trim());
+    if (!m) return '';
+    var d = +m[1], mo = +m[2], y = +m[3];
+    var dt = new Date(Date.UTC(y, mo - 1, d));
+    if (dt.getUTCFullYear() !== y || dt.getUTCMonth() !== mo - 1 || dt.getUTCDate() !== d) return '';
+    return isoOf(y, mo - 1, d);
+  }
+  var dobCal = makeCalendar(dobCalEl, {
+    min: [+dobMin.slice(0, 4), +dobMin.slice(5, 7) - 1],
+    max: [+dobMax.slice(0, 4), +dobMax.slice(5, 7) - 1],
+    dropdowns: true,
+    enabled: function (iso) { return iso >= dobMin && iso <= dobMax; },
+    selected: function () { return dobValue.value; },
+    dayLabel: function (iso) { return +iso.slice(8, 10) + ' ' + MONTHS[+iso.slice(5, 7) - 1] + ' ' + iso.slice(0, 4); },
+    onPick: function (iso) {
+      dobText.value = toUk(iso);
+      dobValue.value = iso;
+      setDobOpen(false);
+      dobToggle.focus();
+      if (attempted || dobField.classList.contains('bad')) check(dobField);
+    }
+  });
+  function setDobOpen(open) {
+    dobCalEl.hidden = !open;
+    dobToggle.setAttribute('aria-expanded', String(open));
+    if (!open) return;
+    var iso = parseDob(dobText.value);
+    var d = new Date();
+    if (iso) dobCal.show(+iso.slice(0, 4), +iso.slice(5, 7) - 1);
+    else dobCal.show(d.getFullYear() - 3, d.getMonth());
+  }
+  dobToggle.addEventListener('click', function () { setDobOpen(dobCalEl.hidden); });
+  dobCalEl.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') { setDobOpen(false); dobToggle.focus(); }
+  });
+  // Typing: slashes are added automatically, and typed slashes are kept (so 1/4/2022 works too)
+  dobText.addEventListener('input', function (e) {
+    var deleting = e.inputType && e.inputType.indexOf('delete') === 0;
+    var atEnd = dobText.selectionStart === dobText.value.length;
+    if (!deleting && atEnd) {
+      var raw = dobText.value.replace(/[^\d\/]/g, '');
+      var out = '', seg = 0, count = 0;
+      for (var i = 0; i < raw.length; i++) {
+        var ch = raw.charAt(i);
+        if (ch === '/') { if (count > 0 && seg < 2) { out += '/'; seg++; count = 0; } continue; }
+        if (count === (seg < 2 ? 2 : 4)) { if (seg < 2) { out += '/'; seg++; count = 0; } else continue; }
+        out += ch; count++;
+      }
+      if (seg < 2 && count === 2) out += '/';
+      dobText.value = out;
+    }
+    dobValue.value = parseDob(dobText.value);
+    if (!dobCalEl.hidden && dobValue.value) dobCal.show(+dobValue.value.slice(0, 4), +dobValue.value.slice(5, 7) - 1);
+  });
+
+  // Tracking: copy UTMs and click IDs from the page address
+  try {
+    var params = new URLSearchParams(window.location.search);
+    ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'gclid', 'fbclid'].forEach(function (k) {
+      var v = params.get(k);
+      if (v) form.elements[k].value = v.slice(0, 200);
+    });
+  } catch (e) {}
+  form.elements['landing_page'].value = window.location.pathname;
+  form.elements['referrer'].value = (document.referrer || '').slice(0, 300);
+
+  // Validation
+  function check(field) {
+    var type = field.getAttribute('data-type');
+    var msg = '';
+    var controls = field.querySelectorAll('input, select, textarea');
+    if (type === 'radio' || type === 'checkbox') {
+      if (!field.querySelector('input:checked')) msg = field.getAttribute('data-msg');
+    } else if (type === 'calendar') {
+      if (datesState !== 'ready') {
+        // Keep the retry message showing if the dates failed to load
+        if (!trialErr.textContent) trialErr.textContent = 'The session dates are still loading. Try again in a moment.';
+        field.classList.add('bad');
+        return false;
+      }
+      if (!trial.value) msg = field.getAttribute('data-msg');
+    } else if (type === 'dob') {
+      var typed = dobText.value.trim();
+      var iso = parseDob(typed);
+      if (!typed) msg = field.getAttribute('data-msg');
+      else if (!iso) msg = 'Enter the date as DD/MM/YYYY, for example 21/04/2022.';
+      else if (iso < dobMin || iso > dobMax) msg = 'Our sessions are for children aged 2 to 7. Check the date, or email us if your child is just outside this range.';
+      dobValue.value = msg ? '' : iso;
+      if (!msg) dobText.value = toUk(iso);
+    } else {
+      var el = controls[0];
+      var v = el.value.trim();
+      if (!v) {
+        if (el.required) msg = field.getAttribute('data-msg');
+      } else if (type === 'email' && !EMAIL_RE.test(v)) {
+        msg = 'Enter an email address like name@example.com.';
+      } else if (type === 'tel') {
+        var digits = v.replace(/\D/g, '').length;
+        if (digits < 10 || digits > 13) msg = 'Enter a phone number with at least 10 digits, like 07700 900123.';
+      } else if (type === 'date' && (v < el.min || v > el.max)) {
+        msg = 'Our sessions are for children aged 2 to 7. Check the date, or email us if your child is just outside this range.';
+      }
+    }
+    field.querySelector('.err').textContent = msg;
+    field.classList.toggle('bad', !!msg);
+    for (var i = 0; i < controls.length; i++) {
+      if (msg) controls[i].setAttribute('aria-invalid', 'true');
+      else controls[i].removeAttribute('aria-invalid');
+    }
+    return !msg;
+  }
+
+  function fieldOf(el) { return el.closest ? el.closest('.field[data-type]') : null; }
+
+  form.addEventListener('focusout', function (e) {
+    var f = fieldOf(e.target);
+    if (!f) return;
+    if (e.relatedTarget && f.contains(e.relatedTarget)) return;   // still answering the same question
+    var t = f.getAttribute('data-type');
+    if (attempted || (t !== 'radio' && t !== 'checkbox' && e.target.value && e.target.value.trim())) check(f);
+  });
+  form.addEventListener('input', function (e) {
+    var f = fieldOf(e.target);
+    if (f && f.classList.contains('bad')) check(f);
+  });
+  form.addEventListener('change', function (e) {
+    var f = fieldOf(e.target);
+    if (f && (attempted || f.classList.contains('bad'))) check(f);
+  });
+
+  function showAlert(html) { alertBox.innerHTML = html; alertBox.hidden = false; }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (sending) return;
+    attempted = true;
+    alertBox.hidden = true;
+
+    var fields = form.querySelectorAll('.field[data-type]');
+    var firstBad = null;
+    for (var i = 0; i < fields.length; i++) {
+      if (fields[i].closest('[hidden]')) continue;
+      if (!check(fields[i]) && !firstBad) firstBad = fields[i];
+    }
+    if (firstBad) {
+      showAlert('Some details need checking. They are highlighted above.');
+      var target = firstBad.querySelector('button.day') || firstBad.querySelector('input:not([type=hidden]), select, textarea, button');
+      if (target) target.focus();
+      return;
+    }
+
+    // Spam trap filled: act as if it worked, send nothing
+    if (form.elements['website'].value) { showSuccess(); return; }
+
+    send();
+  });
+
+  function send() {
+    sending = true;
+    btn.disabled = true;
+    btn.textContent = 'Booking...';
+
+    var data = new URLSearchParams(new FormData(form));
+    data.set('elapsed_ms', String(Date.now() - startedAt));
+
+    var ctrl = window.AbortController ? new AbortController() : null;
+    var timer = setTimeout(function () { if (ctrl) ctrl.abort(); }, 20000);
+
+    fetch(CONFIG.webhookUrl, { method: 'POST', body: data, signal: ctrl ? ctrl.signal : undefined })
+      .then(function (res) {
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        showSuccess();
+      })
+      .catch(function () {
+        showAlert('Your booking did not send. Check your connection and try again, or email us at <a href="mailto:' + CONFIG.fallbackEmail + '">' + CONFIG.fallbackEmail + '</a> and we will book you in.');
+      })
+      .then(function () {
+        clearTimeout(timer);
+        sending = false;
+        btn.disabled = false;
+        btn.textContent = BTN_TEXT;
+      });
+  }
+
+  function showSuccess() {
+    var child = form.elements["Child's first name"].value.trim();
+    document.getElementById('done-title').textContent = child ? "Thanks, we've got " + child + "'s booking" : "Thanks, we've got your booking";
+    document.getElementById('done-email').textContent = form.elements['Email'].value.trim();
+    document.getElementById('done-date').textContent = trial.value ? niceDate(trial.value) : 'the day';
+    form.hidden = true;
+    done.hidden = false;
+    var title = document.getElementById('done-title');
+    title.focus({ preventScroll: true });
+    document.getElementById('book').scrollIntoView();
+  }
+
+  // Book a sibling: clear the child details, keep the parent details
+  document.getElementById('another-btn').addEventListener('click', function () {
+    ["Child's first name", "Child's last name", "Child's date of birth", 'Is there any other information we should be aware of?'].forEach(function (n) {
+      form.elements[n].value = '';
+    });
+    dobText.value = '';
+    setDobOpen(false);
+    var radios = form.querySelectorAll('input[name="Session time"][type="radio"], input[name="Photo consent"]');
+    for (var i = 0; i < radios.length; i++) radios[i].checked = false;
+    var bad = form.querySelectorAll('.field.bad');
+    for (var j = 0; j < bad.length; j++) check(bad[j]);
+    attempted = false;
+    alertBox.hidden = true;
+    startedAt = Date.now();
+    done.hidden = true;
+    form.hidden = false;
+    document.getElementById('book').scrollIntoView();
+    document.getElementById('child-first').focus({ preventScroll: true });
+  });
+})();
+</script>
+</body>
+</html>
