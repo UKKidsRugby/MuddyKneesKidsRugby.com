@@ -168,8 +168,8 @@ footer{background:var(--deep);color:var(--cream);text-align:center;padding:1.3re
 <main>
 <section class="intro"><div class="wrap"><div class="col">
  <span class="pill">First session free</span>
- <h1>Book a free trial</h1>
- <p class="lead">Saturday morning rugby on Tooting Common for children aged 2 to 7. Tell us about your child and we'll be in touch with everything you need for their first session.</p>
+ <h1 id="page-title">Book a free trial</h1>
+ <p class="lead" id="page-lead">Saturday morning rugby on Tooting Common for children aged 2 to 7. Tell us about your child and we'll be in touch with everything you need for their first session.</p>
  <dl class="facts">
   <div><dt>When</dt><dd>Saturdays in term time, 10am to 11am</dd></div>
   <div><dt>Where</dt><dd>Tooting Common SW17, opposite the Rose and Crown pub</dd></div>
@@ -184,11 +184,11 @@ footer{background:var(--deep);color:var(--cream);text-align:center;padding:1.3re
   <noscript><p class="alert">This form needs JavaScript switched on. To book, email us at <a href="mailto:ukkidsrugby@gmail.com">ukkidsrugby@gmail.com</a>.</p></noscript>
 
   <form id="booking" novalidate>
-   <p class="siblings">Booking for siblings? Book one child at a time. We'll keep your details so the next one is quicker.</p>
+   <p class="siblings" id="siblings">Booking for siblings? Book one child at a time. We'll keep your details so the next one is quicker.</p>
 
-   <fieldset class="sec">
-    <legend><span class="sec-h"><span class="num" aria-hidden="true">1</span>Your child</span></legend>
-    <div class="grid2">
+   <fieldset class="sec" id="sec-child">
+    <legend><span class="sec-h"><span class="num" aria-hidden="true">1</span><span id="sec-child-title">Your child</span></span></legend>
+    <div class="grid2" id="child-names">
      <div class="field" data-type="text" data-msg="Enter your child's first name.">
       <label class="lbl" for="child-first">First name</label>
       <input type="text" id="child-first" name="Child's first name" autocomplete="off" autocapitalize="words" required aria-describedby="err-child-first">
@@ -226,7 +226,7 @@ footer{background:var(--deep);color:var(--cream);text-align:center;padding:1.3re
     </fieldset>
    </fieldset>
 
-   <fieldset class="sec">
+   <fieldset class="sec" id="sec-you">
     <legend><span class="sec-h"><span class="num" aria-hidden="true">2</span>You</span></legend>
     <fieldset class="field" data-type="radio" data-msg="Tell us whether you're their parent or guardian.">
      <legend class="lbl">Are you their parent or guardian?</legend>
@@ -262,7 +262,7 @@ footer{background:var(--deep);color:var(--cream);text-align:center;padding:1.3re
     </div>
    </fieldset>
 
-   <fieldset class="sec">
+   <fieldset class="sec" id="sec-else">
     <legend><span class="sec-h"><span class="num" aria-hidden="true">3</span>Anything else</span></legend>
     <div class="field" data-type="select" data-msg="Tell us how you heard about us.">
      <label class="lbl" for="heard">How did you hear about us?</label>
@@ -281,7 +281,7 @@ footer{background:var(--deep);color:var(--cream);text-align:center;padding:1.3re
     </div>
    </fieldset>
 
-   <fieldset class="sec">
+   <fieldset class="sec" id="sec-terms">
     <legend><span class="sec-h"><span class="num" aria-hidden="true">4</span>Before you book</span></legend>
     <fieldset class="field" data-type="radio" data-msg="Choose yes or no for photos.">
      <legend class="lbl">Can we use photos and videos of your child in our marketing?</legend>
@@ -373,7 +373,7 @@ footer{background:var(--deep);color:var(--cream);text-align:center;padding:1.3re
   <div class="done" id="done" hidden>
    <svg class="star" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 4C54 32 68 46 96 50C68 54 54 68 50 96C46 68 32 54 4 50C32 46 46 32 50 4Z" fill="#ffd51a" stroke="#3a0b07" stroke-width="4" stroke-linejoin="round"/></svg>
    <h2 id="done-title" tabindex="-1">Thanks, we've got your booking</h2>
-   <p>See you on <strong id="done-date">Saturday</strong>. We've sent a confirmation email to <strong id="done-email"></strong>. If it isn't in your inbox in a few minutes, check your junk folder.</p>
+   <p id="done-msg">See you on <strong id="done-date">Saturday</strong>. We've sent a confirmation email to <strong id="done-email"></strong>. If it isn't in your inbox in a few minutes, check your junk folder.</p>
    <p>On the day, come dressed for the weather with a snack and a drink. We meet on Tooting Common, opposite the Rose and Crown pub.</p>
    <div class="actions">
     <button class="btn" type="button" id="another-btn">Book another child</button>
@@ -392,6 +392,8 @@ footer{background:var(--deep);color:var(--cream);text-align:center;padding:1.3re
   var CONFIG = {
     // Production URL of the n8n Webhook node (POST)
     webhookUrl: 'https://u-mkkr.app.n8n.cloud/webhook/mkkr-booking',
+    // Production URL of the n8n rebooking workflow (POST), used when the page is opened with ?rebook=
+    rebookUrl: 'https://u-mkkr.app.n8n.cloud/webhook/mkkr-rebook',
     // Address of the n8n workflow that lists free trial dates (GET). Set at the top of the page.
     datesUrl: window.mkDatesUrl,
     // A Saturday stays bookable until this London time on the day. Keep it the same as CUTOFF in n8n.
@@ -430,6 +432,35 @@ footer{background:var(--deep);color:var(--cream);text-align:center;padding:1.3re
   var alertBox = document.getElementById('form-alert');
   var done = document.getElementById('done');
   var BTN_TEXT = btn.textContent;
+
+  // ===== Rebooking: /book/?rebook=recXXXXXXXXXXXXXX&child=Toby =====
+  // Families who already booked get this link in our emails. They only choose a new date;
+  // n8n already has their details. Without a valid rebook value the page is the normal booking form.
+  var REBOOK = (function () {
+    try {
+      var q = new URLSearchParams(window.location.search);
+      var id = (q.get('rebook') || '').trim();
+      if (!/^rec[A-Za-z0-9]{14}$/.test(id)) return null;
+      var name = (q.get('child') || '');
+      try { name = name.replace(new RegExp("[^\\p{L}' -]", 'gu'), ''); }
+      catch (e) { name = name.replace(/[^A-Za-z' -]/g, ''); }
+      name = name.replace(/\s+/g, ' ').trim().slice(0, 30);
+      return { id: id, child: name };
+    } catch (e) { return null; }
+  })();
+  if (REBOOK) {
+    var whose = REBOOK.child ? REBOOK.child + "'s" : "your child's";
+    document.title = 'Rebook a free trial | Muddy Knees Kids Rugby';
+    document.getElementById('page-title').textContent = 'Rebook a free trial';
+    document.getElementById('page-lead').textContent = 'Pick a new Saturday for ' + whose + ' free trial. We already have your details, so this only takes a moment.';
+    ['siblings', 'child-names', 'dob-field', 'sec-you', 'sec-else', 'sec-terms', 'another-btn'].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) el.hidden = true;
+    });
+    document.querySelector('#sec-child .num').hidden = true;
+    document.getElementById('sec-child-title').textContent = 'Choose a new date';
+    btn.textContent = BTN_TEXT = 'Rebook free trial';
+  }
   var startedAt = Date.now();
   var attempted = false;
   var sending = false;
@@ -860,19 +891,36 @@ footer{background:var(--deep);color:var(--cream);text-align:center;padding:1.3re
     btn.disabled = true;
     btn.textContent = 'Booking...';
 
-    var data = new URLSearchParams(new FormData(form));
+    var data, url = CONFIG.webhookUrl;
+    if (REBOOK) {
+      url = CONFIG.rebookUrl;
+      data = new URLSearchParams();
+      data.set('playerId', REBOOK.id);
+      data.set('trialDate', trial.value);
+      data.set('sessionTime', form.elements['Session time'] ? form.elements['Session time'].value : '');
+      data.set('website', form.elements['website'].value);
+    } else {
+      data = new URLSearchParams(new FormData(form));
+    }
     data.set('elapsed_ms', String(Date.now() - startedAt));
 
     var ctrl = window.AbortController ? new AbortController() : null;
     var timer = setTimeout(function () { if (ctrl) ctrl.abort(); }, 20000);
 
-    fetch(CONFIG.webhookUrl, { method: 'POST', body: data, signal: ctrl ? ctrl.signal : undefined })
+    fetch(url, { method: 'POST', body: data, signal: ctrl ? ctrl.signal : undefined })
       .then(function (res) {
         if (!res.ok) throw new Error('HTTP ' + res.status);
-        showSuccess();
+        if (!REBOOK) return;
+        // The rebooking workflow answers {"ok": true} only when the free trial has been moved
+        return res.json().then(function (d) { if (!d || d.ok !== true) throw new Error('Not rebooked'); });
       })
+      .then(function () { showSuccess(); })
       .catch(function () {
-        showAlert('Your booking did not send. Check your connection and try again, or email us at <a href="mailto:' + CONFIG.fallbackEmail + '">' + CONFIG.fallbackEmail + '</a> and we will book you in.');
+        if (REBOOK) {
+          showAlert('We couldn\'t rebook this online. Email us at <a href="mailto:' + CONFIG.fallbackEmail + '">' + CONFIG.fallbackEmail + '</a> with the Saturday you\'d like and we will book you in.');
+        } else {
+          showAlert('Your booking did not send. Check your connection and try again, or email us at <a href="mailto:' + CONFIG.fallbackEmail + '">' + CONFIG.fallbackEmail + '</a> and we will book you in.');
+        }
       })
       .then(function () {
         clearTimeout(timer);
@@ -883,10 +931,21 @@ footer{background:var(--deep);color:var(--cream);text-align:center;padding:1.3re
   }
 
   function showSuccess() {
-    var child = form.elements["Child's first name"].value.trim();
-    document.getElementById('done-title').textContent = child ? "Thanks, we've got " + child + "'s booking" : "Thanks, we've got your booking";
-    document.getElementById('done-email').textContent = form.elements['Email'].value.trim();
-    document.getElementById('done-date').textContent = trial.value ? niceDate(trial.value) : 'the day';
+    if (REBOOK) {
+      document.getElementById('done-title').textContent = REBOOK.child ? 'Done, ' + REBOOK.child + "'s free trial is rebooked" : 'Done, your free trial is rebooked';
+      var msg = document.getElementById('done-msg');
+      msg.textContent = '';
+      var when = document.createElement('strong');
+      when.textContent = trial.value ? niceDate(trial.value) : 'the day';
+      msg.appendChild(document.createTextNode('See you on '));
+      msg.appendChild(when);
+      msg.appendChild(document.createTextNode(". We've sent you a confirmation email. If it isn't in your inbox in a few minutes, check your junk folder."));
+    } else {
+      var child = form.elements["Child's first name"].value.trim();
+      document.getElementById('done-title').textContent = child ? "Thanks, we've got " + child + "'s booking" : "Thanks, we've got your booking";
+      document.getElementById('done-email').textContent = form.elements['Email'].value.trim();
+      document.getElementById('done-date').textContent = trial.value ? niceDate(trial.value) : 'the day';
+    }
     form.hidden = true;
     done.hidden = false;
     var title = document.getElementById('done-title');
